@@ -1,0 +1,69 @@
+import React, { useEffect, useState } from 'react';
+
+import { useSelector, useDispatch } from "react-redux";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Heading from '../Heading';
+import ProductCard from '../../Common/Product/ProductCard';
+
+const TodayDeal = () => {
+  let products = useSelector((state) => state.products.products);
+  console.log('fffffffffffff', products);
+    let settings = {
+        arrows: false,
+        dots: true,
+        margin:30,
+        infinite: true,
+        speed: 500, 
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [{
+ 
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+            }
+          }, 
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+        ]
+      };
+    return (
+    <>
+    <section id="to_days_area" className="ptb-100 slider_arrows_one">
+        <div className="container">
+            <Heading heading="ToDay's Deal" para="See What Everyone Is Shopping from Andshop E-Commerce Today"/>
+            <div className="row">
+                <div className="col-lg-12">
+                    <div className="todays_slider">
+                    {/* <Slider {...settings}> */}
+                    {products.slice(6, 13).map((data, index) =>(
+                          <ProductCard data={data} key={index}/>
+                     ))}
+                  {/* </Slider> */}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+        </>
+    )
+}
+
+export default TodayDeal

@@ -1,0 +1,50 @@
+export const ColorData = [
+  {
+    id: 1,
+    color:'#FFFF00',
+    name: "Դեղին",
+    en_name: "yellow",
+    checked: false,
+  },
+  {
+    id: 2,
+    color:'#000000',
+    name: "Սև",
+    en_name: "black",
+    checked: false,
+  },
+  {
+    id: 3,
+    color:'#FFFFFF',
+    name: "Սպիտակ",
+    en_name: "white",
+    checked: false,
+  },
+  {
+    id: 4,color:'#FF0000',
+    name: "Կարմիր",
+    en_name: "red",
+    checked: false,
+  },
+  {
+    id: 5,
+    color:'#0000FF',
+    name: "Կապույտ",
+    en_name: "blue",
+    checked: false,
+  },
+  {
+    id: 6,
+    color:'#00FF00',
+    name: "Կանաչ",
+    en_name: "green",
+    checked: false,
+  },
+  {
+    id: 7,
+    color:'#FFC0CB',
+    name: "Վարդագույն",
+    en_name: "pink",
+    checked: false,
+  },
+]
